@@ -1,0 +1,9 @@
+streamlit
+xlrd
+pymorphy2
+re
+gensim 
+numpy
+matplotlib
+nltk  
+PIL
