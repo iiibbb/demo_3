@@ -5,4 +5,4 @@ gensim
 numpy
 matplotlib
 nltk  
-PIL
+pillow
