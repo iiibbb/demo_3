@@ -5,5 +5,4 @@ gensim
 numpy
 matplotlib
 nltk 
-nltk.download('stopwords')
 pillow
