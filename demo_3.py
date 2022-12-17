@@ -15,7 +15,7 @@ delw=[]
 cur_del_words=[]
 corpus=[]
 
-nltk.download('stopwords')
+nltk.corpus.download('stopwords')
 stopwords = stopwords.words("russian")
 stemmer=nltk.stem.SnowballStemmer(language="russian")
 stopwords = nltk.corpus.stopwords.words('russian') 
