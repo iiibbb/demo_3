@@ -1,7 +1,6 @@
 import streamlit as st
 import xlrd
 from pymorphy2 import MorphAnalyzer
-import re
 from gensim import models, corpora
 import numpy as np
 import matplotlib as mplt
@@ -39,7 +38,8 @@ class Prepare(object):
     def prepareWord(self, old_word):
         new_word=old_word
         if not isinstance(old_word,str): return(" ") 
-        new_word=re.sub(self.patterns, ' ', new_word)  
+        new_word=re.sub(self.patterns, ' ', new_word) 
+        new_word=new_word.translate(new_word,self.patterns)
         new_word=new_word.lower()
         #word=stemmer.stem(word) 
         new_word=morph.normal_forms(new_word)[0]
