@@ -15,8 +15,8 @@ delw=[]
 cur_del_words=[]
 corpus=[]
 
-nltk.download('corpus.stopwords')
-stopwords = nltk.corpus.stopwords.words("russian")
+nltk.download('stopwords')
+stopwords = stopwords.words("russian")
 stemmer=nltk.stem.SnowballStemmer(language="russian")
 stopwords = nltk.corpus.stopwords.words('russian') 
 morph = MorphAnalyzer() 
