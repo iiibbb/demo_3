@@ -1,8 +1,2 @@
 streamlit
-xlrd
-pymorphy2
-gensim 
-numpy
-matplotlib
-nltk
 pillow
