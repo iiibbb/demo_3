@@ -24,6 +24,7 @@ morph = MorphAnalyzer()
 
 
 #*****************************************************************
+'''
 class Prepare(object):    
     
     def __init__(self, mas, del_words, minf, maxf):
@@ -122,7 +123,7 @@ class Prepare(object):
     
     
 #**********************************************************
-
+'''
 def start_corpus(file, minf, maxf):    
                     
     #rb = xlrd.open_workbook("D:/DataScience/WEB/DEMO_3/post_news_1.xls",formatting_info=True)
@@ -130,11 +131,11 @@ def start_corpus(file, minf, maxf):
     sheet = rb.sheet_by_index(0)
     mas_data = sheet.col_values(0)
          
-    prep = Prepare(mas_data, delw, minf, maxf)
-    all_mes_words, all_sent_words, all_words, curdelw, fig = prep.prepare_all()
-    cur_del_words=curdelw
-    corpus=all_mes_words
-    
+    #prep = Prepare(mas_data, delw, minf, maxf)
+    #all_mes_words, all_sent_words, all_words, curdelw, fig = prep.prepare_all()
+    #cur_del_words=curdelw
+    #corpus=all_mes_words
+    '''
     list_posts=[]
     list_posts.addItem("*********************************************************")
     list_posts.addItem("Создание корпуса слов дл сообщений канала "+file)
@@ -144,7 +145,7 @@ def start_corpus(file, minf, maxf):
     list_posts.addItem("Всего удалено слов = "+str(len(curdelw)))
     list_posts.addItem("Всего осталось слов = "+str(len(all_words)-len(curdelw)))
     list_posts.addItem("*********************************************************")
-       
+    '''   
     return fig, list_posts
 
 
