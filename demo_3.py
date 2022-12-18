@@ -5,7 +5,7 @@ from gensim import models, corpora
 import numpy as np
 import matplotlib as mplt
 import nltk 
-from nltk.corpus import stopwords 
+from nltk import corpus as crp 
 import PIL as pil
 
 filename="file_1"
@@ -16,7 +16,7 @@ delw=[]
 cur_del_words=[]
 corpus=[]
 
-stopwords = stopwords.words("russian")
+stopwords = crp.stopwords.words("russian")
 stemmer=nltk.stem.SnowballStemmer(language="russian")
 stopwords = nltk.corpus.stopwords.words('russian') 
 morph = MorphAnalyzer() 
