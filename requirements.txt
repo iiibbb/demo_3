@@ -5,5 +5,5 @@ gensim
 numpy
 matplotlib
 nltk
-nltk.corpus. 
+nltk.corpus 
 pillow
