@@ -5,7 +5,7 @@ from gensim import models, corpora
 import numpy as np
 import matplotlib as mplt
 import nltk 
-from nltk import corpus as crp 
+#from nltk import corpus as crp 
 import PIL as pil
 
 filename="file_1"
@@ -16,9 +16,9 @@ delw=[]
 cur_del_words=[]
 corpus=[]
 
-stopwords = crp.stopwords.words("russian")
+#stopwords = crp.stopwords.words("russian")
 stemmer=nltk.stem.SnowballStemmer(language="russian")
-stopwords = nltk.corpus.stopwords.words('russian') 
+#stopwords = nltk.corpus.stopwords.words('russian') 
 morph = MorphAnalyzer() 
 
 
@@ -28,7 +28,7 @@ class Prepare(object):
     
     def __init__(self, mas, del_words, minf, maxf):
         self.stemmer=stemmer 
-        self.ru_stopwords = stopwords
+        #self.ru_stopwords = stopwords
         self.morph = morph 
         self.patterns = "[A-Za-z0-9!#$%&'()*+,./:;<=>?@[\]^_`{|}~—\"\-]+"
          
@@ -44,8 +44,8 @@ class Prepare(object):
         new_word=new_word.translate(new_word,self.patterns)
         new_word=new_word.lower()
         #word=stemmer.stem(word) 
-        new_word=morph.normal_forms(new_word)[0]
-        if new_word not in self.ru_stopwords and new_word not in self.del_words:  
+        #new_word not in self.ru_stopwords and
+        if new_word not in self.del_words:  
             if len(new_word)>3:
                 if 'NOUN' in morph.tag(new_word)[0]:
                     #print("("+old_word+") = "+new_word)
